@@ -41,6 +41,22 @@
 {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
+
+/**
+ 
+ 去除NSString 前面的空格
+
+ @return return 新string
+ */
+-(NSString*)stringByTrimmingLeadingWhitespace {
+    NSInteger i = 0;
+    
+    while ((i < [self length])
+           && [[NSCharacterSet whitespaceCharacterSet] characterIsMember:[self characterAtIndex:i]]) {
+        i++;
+    }
+    return [self substringFromIndex:i];
+}
 /**
  *  @brief  去除字符串与空行
  *

@@ -27,6 +27,14 @@
  *  @return 去除空格后的字符串
  */
 - (NSString *)trimmingWhitespace;
+
+/**
+ 
+ 去除NSString 前面的空格
+ 
+ @return return 新string
+ */
+-(NSString*)stringByTrimmingLeadingWhitespace;
 /**
  *  @brief  去除字符串与空行
  *

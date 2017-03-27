@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
 //
 
-
+#import "NSString+Encrypt.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
 
@@ -21,6 +21,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSString * xx = @"5AR21MLRpqLFNxTPnNjjQPsknrIT1wRVcQpjkOOFpAdmjaMXzXx6tYCEJhkT2O9A487o2Mqy6pp88dsBRJvov8u9Hhu_oboldmQm4Q48eLYNtPN5duYe3GDLQ6LuTTGiaYZLh9OjESBkiV0mBICjUr1WYWxuAZtmpCZofkdbONGCm75G7aeC0Si6vwwm-CI5sUjKCxrVzIsXi31_zk5nqg";
+    
+    NSData *data = [NSData data];
+    NSString *yy = [xx decryptedWithAESUsingKey:@"e289b93050d0ea8d0cbfb296f46281b4081c7a9db807797fdd9a44f9264b31b2" andIV:@"lB6x692zczsqYMkk+IEl1w=="];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
